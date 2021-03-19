@@ -11,6 +11,7 @@ public class CadastroFuncionario {
 		this.crud = crud;
 	}
 	public void cadastrarFuncionario() {
+		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		Funcionario funcionario = new Funcionario();
 		funcionario.gerarId();
@@ -24,7 +25,6 @@ public class CadastroFuncionario {
 		funcionario.setSalario(scanner.nextInt());
 		crud.salvar();
 		System.out.println(funcionario);
-		scanner.close();
 	}
 	public void alterarFuncionario() {
 		crud.alterar();

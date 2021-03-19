@@ -12,6 +12,7 @@ public class CadastroProduto {
 	}
 	
 	public void cadastrarProduto() {
+		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		Produto produto = new Produto();
 		System.out.println("Informe o nome do produto:");
@@ -22,7 +23,6 @@ public class CadastroProduto {
 		produto.setPreco(scanner.nextInt());
 		crud.salvar();
 		System.out.println(produto);
-		scanner.close();
 	}
 	public void alterarProduto() {
 		crud.alterar();

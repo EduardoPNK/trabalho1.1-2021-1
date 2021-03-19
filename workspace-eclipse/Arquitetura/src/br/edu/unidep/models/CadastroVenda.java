@@ -12,6 +12,7 @@ public class CadastroVenda {
 	}
 	
 	public void CadastrarVenda() {
+		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		Venda venda = new Venda();
 		System.out.println("Informe a data da venda:");
@@ -20,7 +21,6 @@ public class CadastroVenda {
 		venda.setId(scanner.nextInt());
 		System.out.println(venda);
 		crud.salvar();
-		scanner.close();
 	}
 	public void alterarVenda() {
 		crud.alterar();
