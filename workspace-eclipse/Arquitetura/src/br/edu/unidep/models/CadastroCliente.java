@@ -45,7 +45,6 @@ public class CadastroCliente {
 			System.out.println("Cadastro finalizado");
 			break;}
 		}
-		scanner.close();
 	}
 	public void alterarCliente() {
 		crud.alterar();
